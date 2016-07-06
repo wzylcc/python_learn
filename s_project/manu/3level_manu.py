@@ -14,7 +14,7 @@ while i <3:
         if M1=='q':
             break
         #判断是否不是字符串格式
-        elif not str.isdigit(M1):
+        elif not str.isdigit(M1) or int(M1) > 3 :
             print("wrong input!!")
             continue
         N1= L1[int(M1)-1]
@@ -27,14 +27,14 @@ while i <3:
         else:
             L2 = D1[N2]
         print("1.%s 2.%s 3.%s" %(L2[0],L2[1],L2[2]))
-        M1 = input("please choose(q is quit，b is ):\n")
+        M1 = input("please choose(q is quit，b is back):\n")
         if M1 == 'q':
             break
         #如果按b就返回上级菜单
         elif M1 == 'b':
             i-=1
             continue
-        elif not str.isdigit(M1):
+        elif not str.isdigit(M1) or int(M1) > 3:
             print("wrong input!!")
             continue
         N2 = L2[int(M1) - 1]
